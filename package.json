@@ -2,9 +2,9 @@
   "name": "marko-webpack",
   "description": "Sample app that demonstrates the power of building UI components using Marko and Webpack",
   "version": "1.0.0",
-  "author": "Patrick Steele-idem <pnidem@gmail.com>",
+  "author": "Joshua Amaju <princejosh0007@gmail.com>",
   "bugs": {
-    "url": "https://github.com/marko-js-samples/marko-webpack/issues"
+    "url": "https://github.com/JoshuaAmaju/marko-typescript/issues"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -36,12 +36,12 @@
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
   },
-  "homepage": "https://github.com/marko-js-samples/marko-webpack",
+  "homepage": "https://github.com/JoshuaAmaju/marko-typescript",
   "license": "MIT",
   "main": "dist/server/main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marko-js-samples/marko-webpack.git"
+    "url": "https://github.com/JoshuaAmaju/marko-typescript.git"
   },
   "scripts": {
     "start:dev": "webpack-dev-server",
