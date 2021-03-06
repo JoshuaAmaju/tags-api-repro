@@ -1,5 +1,4 @@
-Marko Widgets: UI Components Playground w/ Webpack
-==================================
+# Marko Webpack Typescript template
 
 ## Getting Started
 
@@ -11,6 +10,7 @@ npm run start:dev
 ```
 
 ## Production Build
+
 ```bash
 npm run build
 npm start
