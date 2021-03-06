@@ -3,8 +3,8 @@
 ## Getting Started
 
 ```bash
-git clone https://github.com/marko-js-samples/marko-webpack.git
-cd marko-webpack
+git clone https://github.com/JoshuaAmaju/marko-typescript.git
+cd marko-typescript
 npm install
 npm run start:dev
 ```
