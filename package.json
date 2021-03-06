@@ -1,6 +1,6 @@
 {
   "name": "marko-webpack",
-  "description": "Sample app that demonstrates the power of building UI components using Marko and Webpack",
+  "description": "Sample app that demonstrates the power of building UI components using Marko and Webpack using Typescript",
   "version": "1.0.0",
   "author": "Joshua Amaju <princejosh0007@gmail.com>",
   "bugs": {
