@@ -1,7 +1,7 @@
 import express from "express";
 import compression from "compression";
 
-import HomePage from "./pages/home";
+import HomePage from "./home";
 
 const app = express();
 const port = process.env.PORT || 8080;
