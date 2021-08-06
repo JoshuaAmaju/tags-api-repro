@@ -1,7 +1,7 @@
 import { push, pop, splice } from '../utils'
 
 <let/arr=[]/>
-<let/count=0 />
+<let/lastId=0/>
 
 <style>
     li::before {
@@ -12,16 +12,15 @@ import { push, pop, splice } from '../utils'
 <effect() {
     console.log(arr)
 } />
-
 <ul>
-    <for|i| of=arr>
+    <for|id, i| of=arr by=(id => id)>
         <let/count=0/>
 
         <effect() {
-            console.log('i', i)
+            console.log('i', id)
         } />
 
-        <li data-count=i>
+        <li data-count=id>
             <p>${count}</p>
 
             <button onClick() {
@@ -33,7 +32,7 @@ import { push, pop, splice } from '../utils'
             }>+</button>
 
             <button onClick() {
-                console.log(i);
+                console.log(id);
                 arr = splice(arr, i, 1);
             }>remove</button>
         </li>
@@ -46,7 +45,7 @@ import { push, pop, splice } from '../utils'
 }>-</button>
 
 <button onClick() {
-    arr = push(arr, [...arr].length + 1)
+    arr = push(arr, lastId++)
 }>+</button>
 
 // BELOW IS ALSO AND EXAMPLE OF THE MAP ISSUE
