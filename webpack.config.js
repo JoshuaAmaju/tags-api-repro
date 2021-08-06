@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MarkoPlugin = require("@marko/webpack/plugin").default;
+const nodeExternals = require('webpack-node-externals');
 const CSSExtractPlugin = require("mini-css-extract-plugin");
 const SpawnServerPlugin = require("spawn-server-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -47,7 +48,13 @@ module.exports = [
   compiler({
     name: "Server",
     target: "async-node",
-    externals: [/^[^./!]/], // excludes node_modules
+    externals: [
+      // Exclude node_modules, but ensure non js files are bundled.
+      // Eg: `.marko`, `.css`, etc.
+      nodeExternals({
+          allowlist: [/\.(?!(?:js|json)$)[^.]+$/]
+      })
+    ],
     optimization: {
       minimize: false,
     },

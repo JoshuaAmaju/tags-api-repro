@@ -18,7 +18,7 @@
     "svelte-array-helper": "^2.0.2"
   },
   "devDependencies": {
-    "@marko/tags-api-preview": "^0.0.12",
+    "@marko/tags-api-preview": "^0.0.13",
     "@marko/webpack": "^7.1.2",
     "@types/compression": "^1.7.0",
     "@types/express": "^4.17.11",
@@ -38,7 +38,8 @@
     "typescript": "^4.2.3",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-node-externals": "^3.0.0"
   },
   "homepage": "https://github.com/JoshuaAmaju/marko-typescript",
   "license": "MIT",
