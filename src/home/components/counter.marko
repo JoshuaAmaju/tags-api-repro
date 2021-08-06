@@ -1,12 +1,9 @@
 <attrs/{value} />
 
-<!-- <effect() {
-    setTimeout(() => count++, 3000)
-} /> -->
+<let/count=value || 0 />
 
-<div>
-    <h2>Counter</h2>
-    <p>${value}</p>
-</div>
+<effect() {
+    setTimeout(() => count++, 1000)
+} />
 
-<!-- <return=count /> -->
+<h2>Counter ${count}</h2>

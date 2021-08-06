@@ -1,0 +1,104 @@
+import { push, pop, splice } from '../utils'
+
+<let/arr=[]/>
+<let/count=0 />
+
+<style>
+    li::before {
+        content: "counter: " attr(data-count);
+    }
+</style>
+
+<effect() {
+    console.log(arr)
+} />
+
+<ul>
+    <for|i| of=arr>
+        <let/count=0/>
+
+        <effect() {
+            console.log('i', i)
+        } />
+
+        <li data-count=i>
+            <p>${count}</p>
+
+            <button onClick() {
+                count--;
+            }>-</button>
+
+            <button onClick() {
+                count++;
+            }>+</button>
+
+            <button onClick() {
+                console.log(i);
+                arr = splice(arr, i, 1);
+            }>remove</button>
+        </li>
+    </for>
+</ul>
+
+
+<button onClick() {
+    arr = pop(arr);
+}>-</button>
+
+<button onClick() {
+    arr = push(arr, [...arr].length + 1)
+}>+</button>
+
+<!-- <let/map=new Map()/>
+<let/count=0 /> -->
+
+<!-- <style>
+    li::before {
+        content: "counter: " attr(data-count);
+    }
+</style> -->
+
+<!-- <effect() {
+    console.log(map)
+} />
+
+<ul>
+    <for|[key, val]| of=[...map.entries()]>
+        <let/count=val/>
+
+        <li data-count=key>
+            <p>${count}</p>
+
+            <button onClick() {
+                count--;
+            }>-</button>
+
+            <button onClick() {
+                count++;
+            }>+</button>
+
+            <button onClick() {
+                console.log(val);
+                map.delete(val);
+            }>remove</button>
+        </li>
+    </for>
+</ul>
+
+
+<button onClick() {
+    const last = [...map.keys()].pop();
+    map.delete(last)
+}>-</button>
+
+<button onClick() {
+    const val = map.size + 1
+    
+    console.log(val, map)
+
+    // setting this doesn't work
+    map = map.set(val, val);
+
+    // neither does this
+    map = map;
+}>+</button> -->
